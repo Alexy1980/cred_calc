@@ -5,6 +5,7 @@
 .title {
     margin : 0 0 40px;
     text-align: center;
+    color: #8D8D8D;
 }
 
 #res {
@@ -19,6 +20,7 @@
 .left {
     background-color: white;
     padding-top: 10px;
+    color: #8D8D8D;
     min-height: 180px;
 }
 
