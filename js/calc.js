@@ -4,7 +4,7 @@ angular.module('creditCalc', []).controller('calcCtrl', function ($scope)
 
     $scope.sumCredit = 1000;
     $scope.timeCredit = 12;
-    $scope.percentRateCredit = 20;
+    $scope.percentRateCredit = 15;
 
     $scope.action = function()
     {
