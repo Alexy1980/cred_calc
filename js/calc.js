@@ -9,8 +9,8 @@ angular.module('creditCalc', []).controller('calcCtrl', function ($scope)
 
     $scope.action = function()
     {
-        $scope.timeStr = $scope.timeCredit;
-        $scope.percentStr = $scope.percentRateCredit;
+        $scope.timeStr = $scope.timeCredit + ' месяцев';
+        $scope.percentStr = $scope.percentRateCredit + ' %';
         $scope.results = [];
         $scope.sumNa4islProcenti = 0;
         $scope.sumSumPlatej = 0;

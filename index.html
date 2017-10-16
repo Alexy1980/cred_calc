@@ -25,7 +25,7 @@
         </div>
 
         <div class="row">
-            <div class="col-md-8">
+            <div class="col-md-8 left">
                 <form class="form-horizontal" ng-submit="action()">
 
                     <div class="form-group">
@@ -65,11 +65,11 @@
                 </form>
             </div>
 
-            <div class="col-md-4">
-                <table class="table table-striped table-bordered">
+            <div class="col-md-4 right">
+                <table class="table">
                     <thead>
                         <tr>
-                            <td>Результат</td>
+                            <td><h4>Результат</h4></td>
                             <td></td>
                         </tr>
                     </thead>
@@ -87,7 +87,7 @@
                             <td>{{sumNa4islProcenti.toLocaleString()}}</td>
                         </tr>
                         <tr>
-                            <td>Срок кредитования (месяцев)</td>
+                            <td>Срок кредитования</td>
                             <td>{{timeStr}}</td>
                         </tr>
                         <tr>
@@ -111,13 +111,13 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr ng-repeat="result in results">
+                <!--<tr ng-repeat="result in results">
                     <td>{{$index + 1}}</td>
                     <td>{{result.zadoljnost}}</td>
                     <td>{{result.na4islProcenti}}</td>
                     <td>{{result.osnovnoiDolg}}</td>
                     <td>{{result.sumPlatej}}</td>
-                </tr>
+                </tr>-->
                 <tr class="info">
                     <td colspan="2"><b>Итого:</b></td>
                     <td>{{sumNa4islProcenti.toLocaleString()}}</td>
