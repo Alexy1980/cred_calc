@@ -64,20 +64,20 @@ angular.module('creditCalc', []).controller('calcCtrl', function ($scope)
         var percentRateCredit = +$scope.percentRateCredit;
 
         if ( zadoljnost == 0 ) {
-            $scope.errors.zadoljnost = 'Ошибка рассчета задолженности.';
+            $scope.errors.zadoljnost = 'Ошибка рассчета кредита.';
             check = false;
         }
         else if ( isNaN(zadoljnost) ) {
-            $scope.errors.zadoljnost = 'Ошибка рассчета задолженности.';
+            $scope.errors.zadoljnost = 'Ошибка рассчета кредита.';
             check = false;
         }
 
         if ( timeCredit == 0 ) {
-            $scope.errors.timeCredit = 'Ошибка рассчета задолженности.';
+            $scope.errors.timeCredit = 'Ошибка рассчета кредита.';
             check = false;
         }
         else if ( isNaN(timeCredit) ) {
-            $scope.errors.timeCredit = 'Ошибка рассчета времени кредита.';
+            $scope.errors.timeCredit = 'Ошибка рассчета кредита.';
             check = false;
         }
 
