@@ -6,8 +6,11 @@ angular.module('creditCalc', []).controller('calcCtrl', function ($scope)
     $scope.timeCredit = '';
     $scope.percentRateCredit = '';
 
+
     $scope.action = function()
     {
+        $scope.timeStr = $scope.timeCredit;
+        $scope.percentStr = $scope.percentRateCredit;
         $scope.results = [];
         $scope.sumNa4islProcenti = 0;
         $scope.sumSumPlatej = 0;
@@ -97,4 +100,5 @@ angular.module('creditCalc', []).controller('calcCtrl', function ($scope)
     {
         return (Math.round(number * 100) / 100);
     };
+
 });
