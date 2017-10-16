@@ -8,9 +8,10 @@
     color: #8D8D8D;
 }
 
-#res {
+/*если подключаем расчет по месяцам*/
+/*#res {
     display: none;
-}
+}*/
 
 .error {
     color: #ff0000;
