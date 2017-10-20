@@ -7,10 +7,13 @@
 
     <link href="css/styles.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://rawgit.com/rzajac/angularjs-slider/master/dist/rzslider.css"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.14.3/ui-bootstrap-tpls.js"></script>
+    <script src="https://rawgit.com/rzajac/angularjs-slider/master/dist/rzslider.js"></script>
     <script src="js/calc.js"></script>
 </head>
 <body>
@@ -30,7 +33,11 @@
                         <label for="sum" class="col-md-3 control-label">Сумма кредита ( в рублях ):</label>
 
                         <div class="col-md-2">
-                            <input type="text" class="form-control" id="sum" ng-model="sumCredit">
+                            <input type="text" class="form-control" id="sum" ng-model="sumSlider">
+                        </div>
+
+                        <div class="col-md-6">
+                            <rzslider rz-slider-model="sumSlider"></rzslider>
                         </div>
 
                         <span class="help-block error">{{errors.zadoljnost}}</span>
@@ -40,7 +47,11 @@
                         <label for="date" class="col-md-3 control-label">Срок кредита ( в месяцах ):</label>
 
                         <div class="col-md-2">
-                            <input type="text" class="form-control" id="date" ng-model="timeCredit">
+                            <input type="text" class="form-control" id="date" ng-model="timeSlider">
+                        </div>
+
+                        <div class="col-md-6">
+                            <rzslider rz-slider-model="timeSlider"></rzslider>
                         </div>
 
                         <span class="help-block error">{{errors.timeCredit}}</span>
@@ -50,7 +61,11 @@
                         <label for="percents" class="col-md-3 control-label">Процентная ставка:</label>
 
                         <div class="col-md-2">
-                            <input type="text" class="form-control" id="percents" ng-model="percentRateCredit">
+                            <input type="text" class="form-control" id="percents" ng-model="percentSlider">
+                        </div>
+
+                        <div class="col-md-6">
+                            <rzslider rz-slider-model="percentSlider"></rzslider>
                         </div>
 
                         <span class="help-block error">{{errors.percentRateCredit}}</span>
@@ -74,7 +89,7 @@
                     <tbody>
                         <tr>
                             <td>Вы берете</td>
-                            <td>{{sumSumCredit.toLocaleString()}}</td>
+                            <td>{{sumSumSlider.toLocaleString()}}</td>
                         </tr>
                         <tr>
                             <td>Вы возвращаете</td>
@@ -119,7 +134,7 @@
                 <tr class="info">
                     <td colspan="2"><b>Итого:</b></td>
                     <td>{{sumNa4islProcenti.toLocaleString()}}</td>
-                    <td>{{sumSumCredit.toLocaleString()}}</td>
+                    <td>{{sumSumSlider.toLocaleString()}}</td>
                     <td>{{sumSumPlatej.toLocaleString()}}</td>
                 </tr>
                 </tbody>
